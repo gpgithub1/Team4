@@ -6,8 +6,8 @@ db = pymysql.connect(host='127.0.0.1',port=3306,user='root',passwd='root1234',db
 
 greetings = ["hi", "hello", "hello there", "hello, there"]
 bookText = ["book a flight", "i want to book a flight", "book flight"]
-destination = ["new york","boston", "texas", "san fransisco", "florida"]
-source = ["new york","boston", "texas", "san fransisco", "florida"]
+destination = ["new york","boston", "texas", "san fransisco", "florida", "chicago"]
+source = ["new york","boston", "texas", "san fransisco", "florida", "chicago" ]
 
 def store_data(data):
     destination = data['destination']

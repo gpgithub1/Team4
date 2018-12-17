@@ -37,12 +37,18 @@ def get_bot_response():
         if(len(alldata) != 0):
             for adata in alldata:
                 string = "Here are the flight details: "
-                return (string+"<br> Flight Number : {0}, <br>Airline : {1}, <br> From : {2}, <br> To : {3}, <br> Fare : {4}, <br> On : {5} <br/>".format(adata[0], adata[1], adata[2],adata[3], adata[4], adata[5])+" Should I book it?")
+                return (string+"<br> Flight Number : {0}, <br>Airline : {1}, <br> From : {2}, <br> To : {3}, <br> Fare : ${4}, <br> On : {5} <br/>".format(adata[0], adata[1], adata[2],adata[3], adata[4], adata[5])+" Should I book it?")
         else:
             return str("Sorry, No Flights available. Try another day.")
     elif(userText == "yes"):
+        del data['destination']
+        del data['source']
+        del data['date']
         return ("Your flight has been booked. Have a safe journey.")
     elif(userText == "no"):
+        del data['destination']
+        del data['source']
+        del data['date']
         return ("Thankyou for using travelbot.")
     else:
         return str("Sorry, I did not understand")
