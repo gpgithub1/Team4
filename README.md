@@ -1,4 +1,4 @@
-# Team4
+# Team4 Minimum Viable Product Demo (Static Application)
 
 Install the requirements:
 
