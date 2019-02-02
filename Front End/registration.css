@@ -2,3 +2,13 @@
 form{
   text-align: center;
 }
+
+.Register{
+  background-color: mediumseagreen;
+  padding:40px;
+  width: 350px;
+  height: 675px;
+  margin-top: 90px;
+  margin-left: 180px;
+  margin: 0 auto;
+}
