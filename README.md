@@ -1,4 +1,4 @@
-# Team4 Minimum Viable Product Demo (Static Application)
+# Team4 TRAVELBOT APPLICATION
 
 Install the requirements:
 
