@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>TRAVELBOT PORTAL</title>
+<style>
+  body{
+    background-image: url("bot.jpg");
+    background-repeat: no-repeat;
+    background-color: #CCFFFF;
+  }
+  #main{
+    position: fixed; top: 20%; right: 70px; width: 475px;
+    border: 0px solid #421; padding: 40px;
+    font-family: verdana;
+    font-size: 150%;
+    color:  #FF0000;
+  }
+  #main div{
+    margin: 10px;
+  }
+  #input{
+    border: 0;
+    background: white;
+    padding: 20px;
+    border: 5px
+    solid #421;
+    width: 350px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1 align="center"><font face = "Comic sans MS">WELCOME TO TRAVELBOT</font></h1>
+<h4 align="center">paradise awaits...</h4>
+
+<!-- CHATBOT WINDOW LAYOUT -->
+
+<div id="main">
+  <h3><div>YOU: <span id="YOU"></span></div></h3>
+  <br><br><br>
+  <h3><div>BOT: <span id="BOT"></span></div></h3>
+  <br><br><br>
+  <div><input id="input" type="text" placeholder="ENTER TEXT" autocomplete="off"/></div>
+</div>
+
+
+<!-- LINES 46-58: EVENT LISTENER AWAITS USER INPUT AND THE KEYPRESS OF THE ENTER/RETURN BUTTON. USER TEXT IS DISPLAYED-->
+
+<script type = "text/javascript">
+document.querySelector("#input").addEventListener("keypress", function(e){
+    var key = e.which || e.keycode;
+    if(key === 13){
+        var input = document.getElementById("input").value;
+        document.getElementById("YOU").innerHTML = input;
+
+    }
+});
+
+</script>
+
+</body>
+
+</html>
