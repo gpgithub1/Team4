@@ -1,4 +1,4 @@
-  var config = {
+var config = {
     apiKey: "AIzaSyCU87yhweJP3j2Y4DvPMgPZT-0ouAflB80",
     authDomain: "capstoneteam4-bb4ce.firebaseapp.com",
     databaseURL: "https://capstoneteam4-bb4ce.firebaseio.com",
@@ -8,7 +8,7 @@
   };
   firebase.initializeApp(config);
 
-var messageRef = firebase.database().ref('messages');
+var travelRef = firebase.database().ref('TravelCustomers');
 
 document.getElementById('registerForm').addEventListener('submit', submitForm);
 
@@ -28,9 +28,9 @@ function submitForm(e) {
 	var zip = getInput('zip');
 
 	//Only thing code is missing is a way to check if the username is already taken. 
-	
+
 	if(password == pass2) {
-		saveMessage(username, password, firstName, lastName, email, phone, street, city, state, zip);
+		saveTravel(username, password, firstName, lastName, email, phone, street, city, state, zip);
 		document.getElementById('registerForm').reset();
 	}
 	
@@ -41,9 +41,9 @@ function getInput(id) {
 	return document.getElementById(id).value;
 }
 
-function saveMessage(username, password, firstName, lastName, email, phone, street, city, state, zip) {
-	var newMessageRef = messageRef.push();
-	newMessageRef.set({
+function saveTravel(username, password, firstName, lastName, email, phone, street, city, state, zip) {
+	var newTravelRef = travelRef.push();
+	newTravelRef.set({
 		username:username,
 		password:password,
 		firstName:firstName,
