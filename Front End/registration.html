@@ -8,13 +8,16 @@
   <div class = "Register">
     <form id="registerForm">
       <h3 text align="center">CREATE YOUR LOGIN:<h3>
-      <input type="text" name="name" placeholder="Username" id="username" required><br><br>
+      <input type="text" name="name" placeholder="Username" id="username" onkeyup='exists()' required> 
+      <br>
+      <span id="user"></span>
+      <br>
       <input type="password" name="pass" placeholder="Password" id="password" required><br><br>
       <input type="password" name="pass" placeholder="Confirm Password" id="pass2" onkeyup='match()' required> 
       <br>
       <span id="matching"></span>
       <br>
-      <br><br>
+      <br>
       <h3 text align="center">REGISTER YOUR INFORMATION: <h3>
       <input type="text" placeholder="First Name" id="firstName" required><br><br>
       <input type="text" placeholder="Last Name" id="lastName" required><br><br>
