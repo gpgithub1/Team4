@@ -57,14 +57,6 @@ function saveMessage(username, password, firstName, lastName, email, phone, stre
 	});
 }
 
-function passMiss(){
-            alert("The passwords don't match");
-        }
-
-function successR(){
-            alert("Registered successfully");
-        }
-
 function match() {
   if (getInput('password') == getInput('pass2')) {
     document.getElementById('matching').style.color = 'green';
