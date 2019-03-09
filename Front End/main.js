@@ -10,6 +10,23 @@ var config = {
 
 var travelRef = firebase.database().ref('TravelCustomers');
 
+travelRef.on('value', gotData, errData);
+
+var usernameC = [];
+function gotData(data) {
+	var travel = data.val();
+	var keys = Object.keys(travel);
+	for(var i=0; i < keys.length; i++) {
+		var k = keys[i]; 
+		usernameC[i]= travel[k].username;
+	}
+}
+
+function errData(err) {
+	console.log('Error');
+	console.log(err);
+} 
+
 document.getElementById('registerForm').addEventListener('submit', submitForm);
 
 function submitForm(e) {
@@ -27,9 +44,7 @@ function submitForm(e) {
 	var state = getInput('state');
 	var zip = getInput('zip');
 
-	//Only thing code is missing is a way to check if the username is already taken. 
-
-	if(password == pass2) {
+	if(password == pass2 && doesExist()) {
 		saveTravel(username, password, firstName, lastName, email, phone, street, city, state, zip);
 		document.getElementById('registerForm').reset();
 	}
@@ -64,5 +79,25 @@ function match() {
   } else {
     document.getElementById('matching').style.color = 'red';
     document.getElementById('matching').innerHTML = 'Passwords do not match';
+  }
+}
+
+function doesExist() {
+	var isExist = true;
+	for (i = 0; i < usernameC.length; i ++) {
+		if(usernameC[i] == getInput('username')) {
+			isExist = false;
+		}
+	}
+	return isExist;
+}
+
+function exists() {
+  if (doesExist()) {
+    document.getElementById('user').style.color = 'green';
+    document.getElementById('user').innerHTML = 'Username available';
+  } else {
+    document.getElementById('user').style.color = 'red';
+    document.getElementById('user').innerHTML = 'Username Unavailable';
   }
 }
