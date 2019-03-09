@@ -8,7 +8,7 @@
   };
   firebase.initializeApp(config);
 
-var messageRef = firebase.database().ref('TravelCustomer');
+var messageRef = firebase.database().ref('messages');
 
 document.getElementById('registerForm').addEventListener('submit', submitForm);
 
