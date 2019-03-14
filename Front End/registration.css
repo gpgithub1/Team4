@@ -1,5 +1,5 @@
 body{
-	background: url(https://www.princeton.edu/sites/default/files/styles/scale_1440/public/images/2018/01/clouds-19.jpg?itok=ipMqaoRU);
+  background: url("plane.jpg");
 }
 h3{
 	color: white;
@@ -9,7 +9,7 @@ form{
 }
 input{
 	border-radius: 25px;
-    border: 2px solid #73AD21;
+    border: 2px solid black;
 }
 .niceButton {
 	border-radius: 10px;
@@ -26,7 +26,7 @@ input{
     background-image: linear-gradient(to top, #0b093d, #0c1149, #0e1855, #0e1f62, #0c266f, #013379, #004081, #004d89, #0a5f89, #356e85, #5a7c83, #7d8787);
     }
 .Register{
-  background-color: #000242;
+  background-color: #FF9900;
   -webkit-box-shadow: 10px 13px 95px 55px rgba(0,0,0,0.74);
   -moz-box-shadow: 10px 13px 95px 55px rgba(0,0,0,0.74);
   box-shadow: 10px 13px 95px 55px rgba(0,0,0,0.74);
@@ -42,4 +42,7 @@ input{
 }
 #user {
   font-size: 12px;
+}
+h2{
+  color: white;
 }
