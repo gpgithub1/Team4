@@ -47,6 +47,7 @@ function submitForm(e) {
 	if(password == pass2 && doesExist()) {
 		saveTravel(username, password, firstName, lastName, email, phone, street, city, state, zip);
 		document.getElementById('registerForm').reset();
+		openN();
 	}
 	
 
@@ -100,4 +101,8 @@ function exists() {
     document.getElementById('user').style.color = 'red';
     document.getElementById('user').innerHTML = 'Username Unavailable';
   }
+}
+
+function openN() {
+	window.open("RegistrationS.html","_self")
 }
